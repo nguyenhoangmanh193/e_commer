@@ -32,7 +32,7 @@ import {
 } from '@ant-design/icons';
 import { useSelector } from 'react-redux';
 import axiosInstance from '../../axiosInstance';
-
+import PropTypes from 'prop-types';
 // Order Status Tag Component
 const OrderStatusTag = ({ status }) => {
   const colors = {
@@ -41,6 +41,7 @@ const OrderStatusTag = ({ status }) => {
     paid_pending_confirmation: 'orange',
     completed: 'green'
   };
+
   
   return (
     <Tag color={colors[status] || 'default'}>
